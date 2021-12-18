@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+    
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+    </head>
+    <body>
+      <form class="calculator-form" name="calci">
+        <h1>Calculator</h1>
+        <div class="display">
+        <input type="text" name="display" placeholder="0" readonly/>
+      </div>
+      <div class="button">
+        <input type="button" value="7" onclick="entervalue(this)" class="btn">
+        <input type="button" value="8" onclick="entervalue(this)" class="btn">
+        <input type="button" value="9" onclick="entervalue(this)" class="btn"><br>
+        <input type="button" value="4" onclick="entervalue(this)" class="btn">
+        <input type="button" value="5" onclick="entervalue(this)"class="btn">
+        <input type="button" value="6" onclick="entervalue(this)" class="btn"><br>
+        <input type="button" value="3" onclick="entervalue(this)"class="btn">
+        <input type="button" value="2" onclick="entervalue(this)"class="btn">
+        <input type="button" value="1" onclick="entervalue(this)"class="btn"><br>
+        <input type="button" value="0" onclick="entervalue(this)"class="btn">
+        <input type="button" value="-" onclick="entervalue(this)"class="btn">
+        <input type="button" value="+" onclick="entervalue(this)" class="btn"><br>
+        <input type="button" value="*" onclick="entervalue(this)"class="btn">
+        <input type="button" value="/" onclick="entervalue(this)"class="btn">
+        <input type="button" name="equal" value="="  onclick="calculate()" class="equal"/></br>
+        
+      </div>
+      <input type="button" name="clear" value="clear"  onclick="Clear()"class="clear">
+        
+      </form>
+      <script>
+        
+        function entervalue(e){
+           calci.display.value += e.value;
+        }
+        function calculate(){
+          calci.display.value = eval(calci.display.value);
+        }
+        function Clear(){
+          calci.display.value = null;
+        }
+
+      </script>
+    </body>
+    </html>
